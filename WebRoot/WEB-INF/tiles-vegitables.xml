@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE tiles-definitions PUBLIC  
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"  
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">  
+       
+<tiles-definitions>  
+
+    <!-- common tiles -->
+    <definition name="index" template="/layout/indexLayout.jsp">  
+        <put-attribute name="header" value="/webpage/header.jsp" /> 
+        <put-attribute name="body" value="/webpage/firstpage.jsp" /> 
+        <put-attribute name="footer" value="/webpage/footer.jsp" /> 
+    </definition>
+    
+    <definition name="userLogin" template="/layout/indexLayout.jsp">  
+        <put-attribute name="header" value="/webpage/header.jsp" /> 
+        <put-attribute name="body" value="/webpage/userLogin.jsp" /> 
+        <put-attribute name="footer" value="/webpage/footer.jsp" /> 
+    </definition>
+    
+    <definition name="emptyCart" template="/layout/indexLayout.jsp">  
+        <put-attribute name="header" value="/webpage/header.jsp" /> 
+        <put-attribute name="body" value="/webpage/emptyCart.jsp" /> 
+        <put-attribute name="footer" value="/webpage/footer.jsp" /> 
+    </definition>
+    
+    <definition name="userRegist" template="/layout/indexLayout.jsp">  
+        <put-attribute name="header" value="/webpage/header.jsp" /> 
+        <put-attribute name="body" value="/webpage/userRegister.jsp" /> 
+        <put-attribute name="footer" value="/webpage/footer.jsp" /> 
+    </definition>
+    
+    <definition name="myCart" template="/layout/indexLayout.jsp">  
+        <put-attribute name="header" value="/webpage/header.jsp" /> 
+        <put-attribute name="body" value="/webpage/myCart.jsp" /> 
+        <put-attribute name="footer" value="/webpage/footer.jsp" /> 
+    </definition>
+    
+    <definition name="confirmInfo" template="/layout/indexLayout.jsp">  
+        <put-attribute name="header" value="/webpage/header.jsp" /> 
+        <put-attribute name="body" value="/webpage/confirmInfo.jsp" /> 
+        <put-attribute name="footer" value="/webpage/footer.jsp" /> 
+    </definition>
+    
+    <definition name="orderNumberInfo" template="/layout/indexLayout.jsp">  
+        <put-attribute name="header" value="/webpage/header.jsp" /> 
+        <put-attribute name="body" value="/webpage/orderNumberInfo.jsp" /> 
+        <put-attribute name="footer" value="/webpage/footer.jsp" /> 
+    </definition>
+    
+    <definition name="goodsList" template="/layout/indexLayout.jsp">  
+        <put-attribute name="header" value="/webpage/header.jsp" /> 
+        <put-attribute name="body" value="/webpage/goodsList.jsp" /> 
+        <put-attribute name="footer" value="/webpage/footer.jsp" /> 
+    </definition>
+    
+    <definition name="singleGoods" template="/layout/indexLayout.jsp">  
+        <put-attribute name="header" value="/webpage/header.jsp" /> 
+        <put-attribute name="body" value="/webpage/singleGoods.jsp" /> 
+        <put-attribute name="footer" value="/webpage/footer.jsp" /> 
+    </definition>
+    
+    <definition name="phoneDetail" template="/layout/indexLayout.jsp">  
+        <put-attribute name="header" value="/webpage/header.jsp" /> 
+        <put-attribute name="body" value="/webpage/phoneDetail.jsp" /> 
+        <put-attribute name="footer" value="/webpage/footer.jsp" /> 
+    </definition>
+    
+    <!-- user tiles -->
+    <definition name="showRegister" template="/layout/indexLayout.jsp">  
+        <put-attribute name="header" value="/webpage/header.jsp" /> 
+        <put-attribute name="body" value="/webpage/userRegister.jsp" /> 
+        <put-attribute name="footer" value="/webpage/footer.jsp" /> 
+    </definition>
+    
+    <definition name="registerSuccess" template="/layout/indexLayout.jsp">  
+        <put-attribute name="header" value="/webpage/header.jsp" /> 
+        <put-attribute name="body" value="/webpage/registerSuccess.jsp" /> 
+        <put-attribute name="footer" value="/webpage/footer.jsp" /> 
+    </definition>
+    
+    <definition name="showLogin" template="/layout/indexLayout.jsp">  
+        <put-attribute name="header" value="/webpage/header.jsp" /> 
+        <put-attribute name="body" value="/webpage/userLogin.jsp" /> 
+        <put-attribute name="footer" value="/webpage/footer.jsp" /> 
+    </definition>
+    
+    <definition name="showCart" template="/layout/indexLayout.jsp">  
+        <put-attribute name="header" value="/webpage/header.jsp" /> 
+        <put-attribute name="body" value="/webpage/myCart.jsp" /> 
+        <put-attribute name="footer" value="/webpage/footer.jsp" /> 
+    </definition>
+    
+    <definition name="pay" template="/layout/payLayout.jsp">  
+        <put-attribute name="payheader" value="/webpage/payheader.jsp" /> 
+        <put-attribute name="paybody" value="/webpage/pay.jsp" /> 
+        <put-attribute name="payfooter" value="/webpage/payfooter.jsp" /> 
+    </definition>
+    
+    <definition name="confirmpay" template="/layout/payLayout.jsp">  
+        <put-attribute name="payheader" value="/webpage/payheader.jsp" /> 
+        <put-attribute name="paybody" value="/webpage/confirmPay.jsp" /> 
+        <put-attribute name="payfooter" value="/webpage/payfooter.jsp" /> 
+    </definition>
+    
+    <definition name="showAddMoney" template="/layout/payLayout.jsp">  
+        <put-attribute name="payheader" value="/webpage/payheader.jsp" /> 
+        <put-attribute name="paybody" value="/webpage/addPay.jsp" /> 
+        <put-attribute name="payfooter" value="/webpage/payfooter.jsp" /> 
+    </definition>
+    
+    <definition name="paysuccess" template="/layout/payLayout.jsp">  
+        <put-attribute name="payheader" value="/webpage/payheader.jsp" /> 
+        <put-attribute name="paybody" value="/webpage/paysuccess.jsp" /> 
+        <put-attribute name="payfooter" value="/webpage/payfooter.jsp" /> 
+    </definition>
+    
+</tiles-definitions>  
+    

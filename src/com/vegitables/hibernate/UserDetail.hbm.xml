@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.vegitables.entity">
+    <class name="UserDetail" table="veg_user_detail">
+        <id name="userDetailId" column="USER_DETAIL_ID"  type="java.lang.Integer">
+            <generator class="identity"/>
+        </id>
+		<property name="sex">
+        	<column name="SEX" sql-type="java.lang.Integer" not-null="true"/>
+        </property>
+        <property name="trueName">
+        	<column name="TRUE_NAME" sql-type="varchar"/>
+        </property>
+        <property name="residence">
+        	<column name="RESIDENCE" sql-type="varchar" />
+        </property>
+        <property name="qq">
+        	<column name="QQ" sql-type="varchar" />
+        </property>
+        <property name="avatar">
+        	<column name="AVATAR" sql-type="varchar" />
+        </property>       
+    </class>
+</hibernate-mapping>

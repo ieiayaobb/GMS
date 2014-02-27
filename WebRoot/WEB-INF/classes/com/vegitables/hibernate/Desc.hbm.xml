@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.vegitables.entity">
+    <class name="Desc" table="veg_desc">
+        <id name="descId" column="DESC_ID" type="java.lang.Integer">
+            <generator class="identity"></generator>
+        </id>
+        <property name="weight">
+        	<column name="WEIGHT" sql-type="varchar"/>
+        </property>
+        <property name="storeMethod">
+        	<column name="STORE_METHOD" sql-type="varchar"/>
+        </property>
+        <property name="freshTime">
+        	<column name="FRESH_TIME" sql-type="varchar"/>
+        </property>
+        <property name="mainMeterial">
+        	<column name="MAIN_METERIAL" sql-type="varchar"/>
+        </property>
+         <set name="goodsSeasonings" table="veg_seasoning_with_desc" cascade="save-update" fetch="join" lazy="false">
+        	<key column="GOODS_ID"/>
+        	<many-to-many class="Seasoning" column="SEASONING_ID"/>
+        </set>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.vegitables.entity">
+    <class name="Goods" table="veg_goods">
+        <id name="goodsId" column="GOODS_ID" type="java.lang.Integer">
+            <generator class="identity"></generator>
+        </id>
+        <property name="goodsName">
+        	<column name="GOODS_NAME" sql-type="varchar" not-null="true"/>
+        </property>
+         <property name="goodsPicture">
+        	<column name="GOODS_PICTURE" sql-type="varchar" />
+        </property>
+         <property name="originalPrice">
+        	<column name="ORIGINAL_PRICE" sql-type="varchar" not-null="true"/>
+        </property>
+        <property name="peopleNumber">
+        	<column name="SUIT_NUMBER_OF_PEOPLE" sql-type="varchar" not-null="true"/>
+        </property>
+        <property name="limitPrice">
+        	<column name="LIMIT_PRICE" sql-type="varchar" not-null="true"/>
+        </property>
+        <property name="categoryCode">
+        	<column name="CATEGORY_CODE_ID" sql-type="java.lang.Integer" not-null="true"/>
+        </property>
+       <many-to-one name="desc" class="Desc" lazy="false" column="DESC_ID" cascade="save-update" not-null="true" fetch="join"></many-to-one>
+    </class>
+</hibernate-mapping>

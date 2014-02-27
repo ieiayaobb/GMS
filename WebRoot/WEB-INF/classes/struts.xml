@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+    <package name="common" namespace="/common" extends="struts-default">
+
+        <result-types>  
+            <result-type name="tiles" class="org.apache.struts2.views.tiles.TilesResult" />  
+            <result-type name="chain" class="com.opensymphony.xwork2.ActionChainResult"/>
+        </result-types> 
+        
+        <global-results>
+            <result>/index.jsp</result>
+        </global-results>
+        <!-- userInfo action -->
+        <action name="index" class="com.vegitables.action.CommonAction" method="showIndex">
+            <result name="success" type="tiles">index</result>
+        </action>
+        <action name="userLogin" class="com.vegitables.action.UserAction" method="userLogin">
+            <result name="success" type="tiles">userLogin</result>
+        </action>  
+        <action name="userRegist" class="com.vegitables.action.UserAction" method="userRegist">
+            <result name="success" type="tiles">userRegist</result>
+        </action>
+        <action name="userLogout" class="com.vegitables.action.UserAction" method="logout">
+            <result name="success" type="tiles">index</result>
+        </action>
+        
+        <action name="userLoginSuccess" class="com.vegitables.action.UserAction" method="userLoginSuccess">
+            <result name="error" type="tiles">showLogin</result>
+            <result name="success" type="chain">
+                <param name="namespace">/common</param>
+                <param name="actionName">index</param>
+                <param name="method">showIndex</param>
+            </result>
+        </action>
+        
+        <action name="regist" class="com.vegitables.action.UserAction" method="regist">
+            <result name="success" type="tiles">registerSuccess</result>
+            <result name="error" type="tiles">showRegister</result>
+        </action>
+        <action name="myCart" class="com.vegitables.action.CommonAction" method="myCart">
+            <result name="success" type="tiles">myCart</result>
+            <result name="error" type="tiles">emptyCart</result>
+        </action>
+        <action name="addCart" class="com.vegitables.action.CommonAction" method="addCart">
+            <result name="success" type="chain">myCart</result>
+            <result name="error" type="tiles">emptyCart</result>
+        </action>
+         <action name="confirmInfo" class="com.vegitables.action.UserAction" method="confirmInfo">
+            <result name="success" type="tiles">confirmInfo</result>
+        </action>
+        <action name="orderNumberInfo" class="com.vegitables.action.CommonAction" method="orderNumberInfo">
+            <result name="success" type="tiles">orderNumberInfo</result>
+        </action>
+         <action name="goodsList" class="com.vegitables.action.CommonAction" method="goodsList">
+            <result name="success" type="tiles">goodsList</result>
+        </action>
+         <action name="singleGoods" class="com.vegitables.action.CommonAction" method="singleGoods">
+            <result name="success" type="tiles">singleGoods</result>
+        </action>       
+        <action name="showLogin" class="com.vegitables.action.UserAction" method="showLogin">
+            <result name="success" type="tiles">showLogin</result>
+        </action>  
+        <action name="orderAddress" class="com.vegitables.action.CommonAction" method="addAddress">
+            <result name="success" type="tiles">confirmInfo</result>
+        </action>     
+    </package>
+    <package name="admin" namespace="/admin" extends="struts-default">
+     	<result-types>  
+            <result-type name="tiles" class="org.apache.struts2.views.tiles.TilesResult" />  
+            <result-type name="chain" class="com.opensymphony.xwork2.ActionChainResult"/>
+        </result-types> 
+    	<action name="login" class="com.vegitables.action.AdminAction" method="showAdminLogin">
+            <result name="success">/webpage/adminLogin.jsp</result>
+        </action>
+        
+        <action name="adminLogin" class="com.vegitables.action.AdminAction" method="adminLogin">
+            <result name="error">/webpage/adminLogin.jsp</result>
+            <result name="success">/webpage/adminIndex.jsp</result>
+        </action>
+        
+        <action name="managerInfo" class="com.vegitables.action.AdminAction" method="managerInfo">
+            <result name="success">/webpage/managerInfo.jsp</result>
+        </action>
+        
+        <action name="showUpdateGoods" class="com.vegitables.action.AdminAction" method="showUpdateGoods">
+            <result name="success">/webpage/updateGoods.jsp</result>
+        </action>
+        
+        <action name="updateGoods" class="com.vegitables.action.AdminAction" method="updateGoods">
+            <result name="success">/webpage/updateGoods.jsp</result>
+        </action>
+        
+        <action name="deleteGoods" class="com.vegitables.action.AdminAction" method="deleteGoods">
+            <result name="success">/webpage/managerInfo.jsp</result>
+        </action>
+        
+        <action name="showAddGoods" class="com.vegitables.action.AdminAction" method="showAddGoods">
+            <result name="success">/webpage/addGoods.jsp</result>
+        </action>
+        
+        <action name="addGoods" class="com.vegitables.action.AdminAction" method="addGoods">
+            <result name="success">/webpage/addGoods.jsp</result>
+        </action>
+    </package> 
+</struts>
